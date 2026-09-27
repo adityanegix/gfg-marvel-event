@@ -240,6 +240,35 @@ body{background:#080908;background-image:radial-gradient(circle at 78% 8%,rgba(7
 /* Toggle hero--no-burst on the hero section to preview the layout without the burst. */
 .hero--no-burst .comic-burst{display:none}
 
+/* Keep the mobile hero stacked: copy first, contained artwork second, no split-screen crop. */
+@media (max-width:800px){
+  .hero{min-height:900px;height:auto;display:block;padding:112px 21px 92px;background:#080d0a;position:relative}
+  .hero.section-grid:before{inset:34% -55% -12%;background:radial-gradient(ellipse at 60% 55%,rgba(138,203,98,.16),transparent 58%);filter:blur(24px)}
+  .hero.section-grid:after{inset:0;background:radial-gradient(ellipse at 70% 70%,rgba(78,126,70,.12),transparent 38%),linear-gradient(180deg,transparent 42%,rgba(8,13,10,.72) 72%,#080d0a 100%);opacity:1}
+  .hero__content{width:100%;margin:0;padding:0;position:relative;z-index:3}
+  .hero__title{font-size:clamp(4.7rem,20vw,7.5rem);margin:24px 0 22px}
+  .hero__copy{max-width:340px}
+  .hero__actions{margin-top:30px}
+  .hero__visual{position:relative;right:auto;top:auto;width:100%;height:355px;margin:28px 0 0;transform:none;opacity:.72;z-index:2}
+  .hero__image-frame{position:absolute;left:50%;top:0;width:min(92vw,410px);height:340px;transform:translateX(-50%);overflow:hidden}
+  .hero__image-frame img{object-position:50% 35%;transform:scale(1.04)}
+  .hero__visual .doom-sigil{width:300px;height:300px;top:46%;z-index:3;opacity:.24}
+  .hero-particles{width:320px;height:320px}
+  .hero-particles i{animation-name:particle-orbit-mobile}
+  .hero__coordinates{display:block;right:8px;bottom:2px;font-size:.52rem;z-index:4}
+  .hero__backdrop{right:-18%;bottom:9%;font-size:31vw;opacity:.55;z-index:1}
+  .hero__scroll{left:21px;bottom:22px;z-index:4}
+}
+@media (max-width:430px){
+  .hero{min-height:850px;padding-top:100px;padding-bottom:78px}
+  .hero__visual{height:305px;margin-top:24px}
+  .hero__image-frame{height:292px;width:calc(100vw - 34px)}
+  .hero__visual .doom-sigil{width:250px;height:250px}
+  .hero__backdrop{font-size:27vw}
+  .hero__coordinates{display:none}
+}
+@keyframes particle-orbit-mobile{from{transform:rotate(0deg) translateX(140px) rotate(0deg)}to{transform:rotate(360deg) translateX(140px) rotate(-360deg)}}
+
 /* Challenge telemetry: each track gets its own ambient signal and rotating seal. */
 .mission-card__visual{isolation:isolate}
 .mission-card__visual:before{content:"";position:absolute;inset:-35%;z-index:0;pointer-events:none;opacity:.7;filter:blur(22px);animation:mission-aura 9s ease-in-out infinite alternate}
