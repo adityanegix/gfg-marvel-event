@@ -38,12 +38,21 @@ document.querySelectorAll('.nav a, .footer a').forEach((link) => link.addEventLi
 
 const confirmation = document.getElementById('identityConfirm');
 const missionCards = [...document.querySelectorAll('.mission-card[data-role]')];
+const defaultConfirmation = confirmation.textContent;
+let selectedRole = null;
 const selectTrack = (role, track) => {
+  const isAlreadySelected = selectedRole === role;
+  selectedRole = isAlreadySelected ? null : role;
   missionCards.forEach((card) => {
-    const selected = card.dataset.role === role;
+    const selected = !isAlreadySelected && card.dataset.role === role;
     card.classList.toggle('selected', selected);
     card.setAttribute('aria-pressed', String(selected));
   });
+  if (isAlreadySelected) {
+    confirmation.textContent = defaultConfirmation;
+    confirmation.classList.remove('confirmed');
+    return;
+  }
   confirmation.textContent = `IDENTITY ACCEPTED // DOOMBREAKER CLASS: ${role} // MISSION: ${track}`;
   confirmation.classList.add('confirmed');
 };
