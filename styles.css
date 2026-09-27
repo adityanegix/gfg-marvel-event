@@ -237,6 +237,14 @@ body{background:#080908;background-image:radial-gradient(circle at 78% 8%,rgba(7
 .countdown h2:hover,.story h2:hover,.section-head h2:hover,.briefing h2:hover,.final-cta h2:hover{ text-shadow:0 0 11px rgba(232,236,230,.34);filter:brightness(1.05)}
 .countdown h2:hover em,.story h2:hover em,.section-head h2:hover em,.briefing h2:hover em,.final-cta h2:hover em{ text-shadow:0 0 11px rgba(199,164,91,.42)}
 
+/* Keep the hero title on the same restrained hover treatment as the other main headings. */
+.hero__title:hover{filter:brightness(1.05);text-shadow:0 0 11px rgba(232,236,230,.34)}
+.hero__title:hover em{color:var(--green);text-shadow:0 0 11px rgba(138,203,98,.42)}
+
+/* Match the hero title precisely to the restrained main-heading hover treatment. */
+.hero__title:hover{filter:brightness(1.05);text-shadow:0 0 11px rgba(232,236,230,.34)}
+.hero__title:hover em{filter:none;color:var(--green);text-shadow:0 0 11px rgba(138,203,98,.42)}
+
 /* Toggle hero--no-burst on the hero section to preview the layout without the burst. */
 .hero--no-burst .comic-burst{display:none}
 
