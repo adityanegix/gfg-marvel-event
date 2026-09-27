@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#09130e"/><stop offset=".5" stop-color="#14261b"/><stop offset="1" stop-color="#070908"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <g stroke="#88cb62" stroke-opacity=".25" fill="none"><path d="M0 140h270l55 55h250l55-55h270M0 480h270l55-55h250l55 55h270"/><circle cx="450" cy="312" r="235"/><circle cx="450" cy="312" r="180"/></g>
+  <g fill="#b2d88f" fill-opacity=".9" font-family="monospace" font-size="31"><text x="85" y="230">01</text><text x="735" y="220">11</text><text x="100" y="408">101</text><text x="730" y="412">010</text></g>
+  <g transform="translate(450 318)" fill="none" stroke="#c7a45b" stroke-width="5"><path d="M-120 120h240M-90 120V60M90 120V60M-90 60h180l-55-130H-35Z"/><path d="M-145-70h290M-105-100h210"/></g>
+  <path d="M385 288l65-112 65 112-65 98Z" fill="#526d4d" stroke="#c7a45b" stroke-width="5"/>
+  <path d="M425 270h50M450 230v80" stroke="#d9e8c7" stroke-width="9" filter="url(#glow)"/>
+  <g fill="#88cb62"><circle cx="140" cy="125" r="5"/><circle cx="760" cy="500" r="5"/><circle cx="185" cy="520" r="3"/></g>
+  <text x="42" y="568" fill="#d6e7c6" font-family="monospace" font-size="18" letter-spacing="5">DOOM'S ALGORITHM // OUTSMART THE ENGINE</text>
+</svg>

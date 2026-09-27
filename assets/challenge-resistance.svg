@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#151006"/><stop offset=".52" stop-color="#302216"/><stop offset="1" stop-color="#080908"/></linearGradient><linearGradient id="gold" x2="1"><stop stop-color="#b47b35"/><stop offset=".5" stop-color="#efcc7a"/><stop offset="1" stop-color="#6d4520"/></linearGradient></defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <g stroke="#d7ad61" stroke-opacity=".28" fill="none"><path d="M0 120h210l70 70h340l70-70h210M0 500h210l70-70h340l70 70h210"/><path d="M450 0v180M450 440v180"/></g>
+  <g transform="translate(450 275)" fill="url(#gold)" stroke="#f3d48d" stroke-width="4">
+    <path d="M0-190L45-75 165-90 80 0l85 90-120-15L0 190l-45-115-120 15 85-90-85-90 120 15Z"/>
+    <circle r="58" fill="#182019"/><path d="M-26-25h52v50h-52Zm-18 0h88M0-62v124" fill="none"/>
+  </g>
+  <g fill="#e7c879" font-family="monospace" font-size="28"><text x="90" y="240">BUILD</text><text x="700" y="240">SHIP</text><text x="95" y="400">CREATE</text><text x="700" y="400">RESIST</text></g>
+  <text x="42" y="568" fill="#f1d99f" font-family="monospace" font-size="18" letter-spacing="5">BUILD THE RESISTANCE // DESIGN WHAT COMES NEXT</text>
+</svg>

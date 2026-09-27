@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#170f12"/><stop offset=".55" stop-color="#281a1d"/><stop offset="1" stop-color="#080b0a"/></linearGradient>
+    <linearGradient id="metal" x2="1" y2="1"><stop stop-color="#d5d8c8"/><stop offset=".35" stop-color="#6b756b"/><stop offset=".7" stop-color="#202925"/><stop offset="1" stop-color="#9ca998"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <path d="M0 95h900M0 505h900M120 0v620M780 0v620" stroke="#c84c43" stroke-opacity=".2"/>
+  <g stroke="#c84c43" stroke-opacity=".5" fill="none"><path d="M0 185h225l68 70h314l68-70h225"/><path d="M0 425h225l68-70h314l68 70h225"/></g>
+  <g transform="translate(450 80)">
+    <path d="M-175 90Q-150-55 0-72Q150-55 175 90L115 240H-115Z" fill="#18211c" stroke="#a8b4a6" stroke-width="6"/>
+    <path d="M-106 4L0-32 106 4 128 159 55 238H-55l-73-79Z" fill="url(#metal)" stroke="#d8d9c6" stroke-width="4"/>
+    <path d="M-84 82l64-20 10 24-70 20Zm168 0-64-20-10 24 70 20Z" fill="#080909"/>
+    <path d="M-71 79l52-15 7 8-56 22Zm142 0L19 64l-7 8 56 22Z" fill="#ff6954" filter="url(#glow)"/>
+    <path d="M-47 161Q0 186 47 161M-52 193Q0 218 52 193" fill="none" stroke="#1d2922" stroke-width="9"/>
+    <path d="M-235 260l-75 168M235 260l75 168M-180 260v170M180 260v170" stroke="#718377" stroke-width="26"/>
+  </g>
+  <g fill="#ff7564" filter="url(#glow)"><circle cx="95" cy="140" r="4"/><circle cx="800" cy="370" r="4"/><circle cx="160" cy="510" r="3"/></g>
+  <text x="42" y="568" fill="#f0cdb6" font-family="monospace" font-size="18" letter-spacing="5">THE AWAKENING // SECURE THE BREACH</text>
+</svg>

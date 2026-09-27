@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080909" />
+    <meta name="description" content="DOOM PROTOCOL — a GFG Student Chapter × Bennett University technology competition." />
+    <title>DOOM PROTOCOL // GFG × Bennett University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Loading DOOM PROTOCOL">
+      <div class="loader__inner">
+        <div class="eyebrow">LATVERIA NETWORK DETECTED</div>
+        <div class="loader__brand">DOOM<span> // </span>PROTOCOL</div>
+        <div class="loader__status" id="loaderStatus">SECURE CHANNEL ESTABLISHED</div>
+        <div class="loader__line"><span></span></div>
+        <button class="text-button" id="skipLoader">Skip intro <span>↗</span></button>
+      </div>
+    </div>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor cursor--ring" id="cursorRing"></div>
+    <div class="noise"></div>
+
+    <header class="nav" id="nav">
+      <a href="#top" class="brand-lockup" aria-label="Doom Protocol home"><img class="gfg-logo" src="assets/gfg-logo.png" alt="GeeksforGeeks" /><span class="wordmark">DP<span>/</span>2047</span></a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#story">Story</a>
+        <a href="#missions">Challenges</a>
+        <a href="#countdown">Status</a>
+        <a href="#briefing">Briefing</a>
+      </nav>
+      <a href="#register" class="nav__cta magnetic">Register <span>↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false"><i></i><i></i></button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-grid">
+        <div class="hero__backdrop" aria-hidden="true"><span>LATVERIA</span></div>
+        <div class="hero__content">
+          <div class="eyebrow reveal">GFG STUDENT CHAPTER <b>×</b> BENNETT UNIVERSITY</div>
+          <h1 class="hero__title reveal">DOOM<br /><em>PROTOCOL</em></h1>
+          <p class="hero__sub reveal">THE DIGITAL WORLD IS ABOUT TO FALL.</p>
+          <p class="hero__copy reveal">A signal from Latveria has been intercepted. Become a <strong>DOOMBREAKER</strong> before DOOMSDAY activates.</p>
+          <div class="hero__actions reveal">
+            <a class="button button--solid magnetic" href="#story">Uncover the threat <span>↗</span></a>
+            <a class="button button--ghost magnetic" href="#register">Accept the mission <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-label="Doctor Doom seated in a Latverian throne room">
+          <div class="hero__image-frame"><img src="assets/doom-throne.jpeg" alt="A hooded Doctor Doom figure seated in a green-lit Latverian throne room" /></div>
+          <div class="comic-burst">DOOMSDAY<br /><span>APPROACHES</span></div>
+          <div class="doom-stamp">ϟ<br /><small>LATVERIA</small></div>
+          <div class="hero__coordinates mono">LAT 49.0734° N<br />LON 28.1127° E</div>
+        </div>
+        <div class="hero__scroll mono">SCROLL TO ENTER <span>↓</span></div>
+      </section>
+
+      <section class="countdown section-dark" id="countdown">
+        <div class="container">
+          <div class="section-label reveal"><span>01</span> SYSTEM STATUS</div>
+          <div class="countdown__heading reveal"><p class="eyebrow">DOOMSDAY COUNTDOWN</p><h2>DOOMSDAY WILL<br /><em>ACTIVATE IN</em></h2></div>
+          <div class="countdown__clock reveal" aria-live="polite">
+            <div><strong id="days">000</strong><span>DAYS</span></div><b>:</b>
+            <div><strong id="hours">00</strong><span>HOURS</span></div><b>:</b>
+            <div><strong id="minutes">00</strong><span>MINUTES</span></div><b>:</b>
+            <div><strong id="seconds">00</strong><span>SECONDS</span></div>
+          </div>
+          <div class="countdown__meta"><span class="status-dot"></span> DECEMBER 18, 2026 — THE DAY DOOMSDAY ARRIVES. <b>ϟ</b></div>
+        </div>
+      </section>
+
+      <section class="story section-grid" id="story">
+        <div class="container story__layout">
+          <div class="story__year reveal"><span class="story__seal">ϟ</span>2047<span>.</span><img src="assets/latveria.jpg" alt="Illustrated Latverian city beneath the mountains" /><div class="story__mask"><img src="assets/doom-mask.png" alt="Doctor Doom mask lit by a flare" /><span>THE FACE<br />OF DOOM</span></div></div>
+          <div class="story__copy">
+            <div class="section-label reveal"><span>02</span> CLASSIFIED TRANSMISSION</div><h2 class="reveal">THE<br /><em>STORY</em></h2>
+            <div class="story__lines">
+              <p class="story-line reveal">A signal originating from Latveria has been intercepted by your university.</p>
+              <p class="story-line reveal">At its core lies a system known as <strong>DOOMSDAY</strong>.</p>
+              <p class="story-line reveal">If activated, it will rewrite the world's digital infrastructure.</p>
+              <p class="story-line reveal">Your university has activated <strong>DOOM PROTOCOL</strong>—the counter-operation to stop DOOMSDAY—and called for the recruitment of DOOMBREAKERS.</p>
+              <p class="story-line reveal">You have been recruited to stop DOOMSDAY.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="missions" id="missions">
+        <div class="container">
+          <div class="section-label reveal"><span>03</span> CHALLENGE SELECTION</div>
+          <div class="section-head section-head--missions reveal"><div><p class="eyebrow">CHOOSE YOUR CHALLENGE</p><h2>ONE CHALLENGE.<br /><em>ONE IDENTITY.</em></h2></div><p>Select your technical track.<br />Your Doombreaker role is awarded automatically.</p></div>
+          <div class="mission-list">
+            <article class="mission-card mission-card--red reveal" data-role="HACKER" data-track="THE AWAKENING" tabindex="0" role="button" aria-pressed="false"><div class="mission-card__visual"><span>01</span><div class="mission-art mission-art--mask"></div><div class="scan-lines"></div><div class="mission-glyph">◈</div></div><div class="mission-card__body"><div class="specialisation">CYBERSECURITY</div><h3>THE <em>AWAKENING</em></h3><div class="mission-category"><b>ROLE: HACKER</b></div><p>Doom's systems are coming online. Find the vulnerabilities before the network activates.</p><button class="brief-button" type="button" aria-expanded="false">View challenge brief <span>+</span></button><div class="challenge-brief" aria-hidden="true"><h4>01 — CYBERSECURITY</h4><h5>THE AWAKENING</h5><strong>72-Hour Challenge: “Breach the Doomsday Network”</strong><blockquote>Doom's systems are coming online. Find the vulnerabilities before the network activates.</blockquote><h6>Challenge structure</h6><p>Investigate and exploit vulnerabilities across Doom Industries infrastructure:</p><ul><li><b>Web Security</b> — SQL injection, XSS, authentication flaws</li><li><b>API Security</b> — broken authorization / IDOR-style vulnerabilities</li><li><b>Cryptography</b> — decode weakly implemented encryption</li><li><b>Forensics</b> — investigate logs and files</li><li><b>Reverse Engineering</b> — analyze a small executable or script</li><li><b>Privilege Escalation</b> — move toward restricted resources</li></ul><h6>Final objective</h6><p>Recover <b>5 Doom Keys</b> hidden throughout the infrastructure. The final challenge reveals <b>THE ACTIVATION CODE</b>.</p><h6>Scoring</h6><div class="brief-score"><span>Web exploitation <b>200</b></span><span>API exploitation <b>200</b></span><span>Cryptography <b>150</b></span><span>Digital forensics <b>150</b></span><span>Reverse engineering <b>200</b></span><span>Final breach <b>300</b></span><strong>Total <b>1200</b></strong></div></div><button class="text-button mission-button" type="button">Choose cybersec <span>↗</span></button></div></article>
+            <article class="mission-card mission-card--green reveal" data-role="STRATEGIST" data-track="DOOM'S ALGORITHM" tabindex="0" role="button" aria-pressed="false"><div class="mission-card__visual"><span>02</span><div class="mission-art mission-art--throne"></div><div class="scan-lines"></div><div class="mission-glyph">✦</div></div><div class="mission-card__body"><div class="specialisation">DSA / COMPETITIVE PROGRAMMING</div><h3>DOOM'S <em>ALGORITHM</em></h3><div class="mission-category"><b>ROLE: STRATEGIST</b></div><p>Doom's algorithm predicts every possible move. Outsmart it.</p><button class="brief-button" type="button" aria-expanded="false">View challenge brief <span>+</span></button><div class="challenge-brief" aria-hidden="true"><h4>02 — DSA / COMPETITIVE PROGRAMMING</h4><h5>DOOM'S ALGORITHM</h5><strong>48-Hour Challenge: “Outsmart Doom”</strong><blockquote>Doom's algorithm predicts every possible move. Outsmart it.</blockquote><h6>Progressive problem set</h6><div class="level"><b>LEVEL 01 — DOOM'S SCOUTS</b><span>Foundational · Arrays, strings, sorting, hashing, two pointers</span></div><div class="level"><b>LEVEL 02 — THE LATVERIAN NETWORK</b><span>Intermediate · Binary search, sliding window, stacks, queues, greedy, prefix sums</span></div><div class="level"><b>LEVEL 03 — DOOM'S PREDICTION ENGINE</b><span>Advanced · Graphs, trees, dynamic programming, shortest paths, backtracking</span></div><h6>Scoring</h6><p>Points increase with difficulty. Extra points reward efficient time and space complexity.</p><div class="brief-score"><span>Doom's Scouts <b>250</b></span><span>Latverian Network <b>300</b></span><span>Prediction Engine <b>350</b></span><span>Time + space optimisation <b>300</b></span><strong>Total <b>1200</b></strong></div></div><button class="text-button mission-button" type="button">Choose DSA / CP <span>↗</span></button></div></article>
+            <article class="mission-card mission-card--gold reveal" data-role="ARCHITECT" data-track="BUILD THE RESISTANCE" tabindex="0" role="button" aria-pressed="false"><div class="mission-card__visual"><span>03</span><div class="mission-art mission-art--latveria"></div><div class="scan-lines"></div><div class="mission-glyph">✥</div></div><div class="mission-card__body"><div class="specialisation">WEB DEVELOPMENT</div><h3>BUILD THE <em>RESISTANCE</em></h3><div class="mission-category"><b>ROLE: ARCHITECT</b></div><p>The Avengers have failed. The protocol needs a new system — RESISTANCE.</p><button class="brief-button" type="button" aria-expanded="false">View challenge brief <span>+</span></button><div class="challenge-brief" aria-hidden="true"><h4>03 — WEB DEVELOPMENT</h4><h5>BUILD THE RESISTANCE</h5><strong>48-Hour Challenge: “Build the Resistance Network”</strong><blockquote>The Avengers have failed. The protocol needs a new system — RESISTANCE.</blockquote><h6>The challenge</h6><p>Build a fully functional digital command center. Every team receives the same brief, with freedom in implementation.</p><div class="level"><b>01. JOIN THE RESISTANCE</b><span>Onboarding, profiles, protocol roles, IDs, and status.</span></div><div class="level"><b>02. MISSION CONTROL</b><span>Active missions, difficulty, acceptance, progress, and completion.</span></div><div class="level"><b>03. INTELLIGENCE DATABASE</b><span>Search, filter, sort, and detail views for facilities, systems, members, vulnerabilities, and locations.</span></div><div class="level"><b>04. LIVE THREAT STATUS</b><span>A DOOMSDAY threat level that changes with user actions and progress.</span></div><h6>Final objective</h6><p>Lead every interaction toward <b>STOP DOOMSDAY</b>.</p><h6>Scoring</h6><p>Every track uses the same 1200-point ceiling for fair comparison.</p><div class="brief-score"><span>Join the Resistance <b>200</b></span><span>Mission Control <b>250</b></span><span>Intelligence Database <b>250</b></span><span>Live threat status <b>200</b></span><span>Final objective + polish <b>300</b></span><strong>Total <b>1200</b></strong></div></div><button class="text-button mission-button" type="button">Choose web dev <span>↗</span></button></div></article>
+          </div>
+          <div class="identity-confirm mono" id="identityConfirm">SELECT ONE CHALLENGE TO RECEIVE YOUR DOOMBREAKER ROLE</div>
+        </div>
+      </section>
+
+      <section class="briefing section-dark" id="briefing">
+        <div class="container">
+          <div class="section-label reveal"><span>04</span> FIELD INTELLIGENCE</div>
+          <div class="briefing__top reveal"><p class="eyebrow">MISSION BRIEFING</p><h2>EVERYTHING<br /><em>YOU NEED TO KNOW</em></h2></div>
+          <div class="briefing-art reveal"><img src="assets/doom-throne.jpeg" alt="A hooded Doctor Doom figure seated in a green-lit Latverian throne room" /><div><span class="mono">LATVERIAN ARCHIVE // 004</span><strong>ENTER THE<br /><em>THRONE ROOM</em></strong></div></div>
+          <div class="briefing-grid">
+            <div class="briefing-item reveal"><span>DATE</span><strong>15—18 DECEMBER<br />2026</strong></div><div class="briefing-item reveal"><span>LOCATION</span><strong>BENNETT UNIVERSITY,<br />GREATER NOIDA</strong></div><div class="briefing-item reveal"><span>FORMAT</span><strong>72-HOUR TECH/CODING<br />COMPETITION</strong></div><div class="briefing-item reveal"><span>TEAM SIZE</span><strong>1—3<br />DOOMBREAKERS</strong></div><div class="briefing-item reveal"><span>ELIGIBILITY</span><strong>ALL BENNETT UNIVERSITY<br />B.TECH. CSE STUDENTS</strong></div><div class="briefing-item reveal"><span>PRIZE POOL</span><strong>₹ 50,000<br /><small>+ BRAGGING RIGHTS</small></strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="register">
+        <div class="final-cta__glow"></div><div class="container final-cta__inner">
+          <div class="eyebrow reveal">FINAL TRANSMISSION // PRIORITY OMEGA</div><h2 class="reveal">TIME IS<br /><em>RUNNING OUT.</em></h2><p class="reveal">DOOMSDAY IS COMING.<br /><strong>THE PROTOCOL NEEDS YOU.</strong></p><a class="button button--solid button--large magnetic reveal" href="https://example.com" target="_blank" rel="noopener noreferrer">Register now <span>↗</span></a><div class="final-cta__seal reveal">GFG STUDENT CHAPTER <b>×</b> BENNETT UNIVERSITY</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="container footer__row"><div><a href="#top" class="brand-lockup"><img class="gfg-logo" src="assets/gfg-logo.png" alt="GeeksforGeeks" /><span class="wordmark">DP<span>/</span>2047</span></a><p>GFG Student Chapter × Bennett University</p></div><div class="footer__nav"><a href="#story">Story</a><a href="#missions">Challenges</a><a href="#countdown">Status</a><a href="#briefing">Briefing</a></div><div class="footer__social"><a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8v11M5 5.2v.1M9 19V8m0 4c0-3 2-4 4-4s4 1 4 4v7m0-7v7"></path></svg></a><a href="https://example.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1-4-2-5-2m10 4v-3.5c0-1 .1-1.4-.5-2 1.7-.2 3.5-.8 3.5-4a3 3 0 0 0-.8-2.2A3 3 0 0 0 16 7.1 3 3 0 0 0 12 6a3 3 0 0 0-4 1.1 3 3 0 0 0-.2 2.2A3 3 0 0 0 7 13.5c0 3.2 1.8 3.8 3.5 4-.5.5-.5 1-.5 2V21"></path></svg></a></div></div><div class="container footer__bottom mono"><span>© 2047 DOOM PROTOCOL</span><span><i class="status-dot"></i> DOOMSDAY PROTOCOL // SYSTEM ACTIVE</span></div></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
