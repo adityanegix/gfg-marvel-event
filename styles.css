@@ -13,7 +13,9 @@ body{background:#080908;background-image:radial-gradient(circle at 78% 8%,rgba(7
 .hero{background:linear-gradient(90deg,rgba(5,7,6,.98) 0%,rgba(5,7,6,.8) 36%,rgba(5,7,6,.12) 72%),url("assets/latveria.jpg") 75% 43%/cover no-repeat}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg),transparent 30%,rgba(0,0,0,.2)),radial-gradient(circle at 72% 44%,transparent 20%,rgba(0,0,0,.45) 72%);pointer-events:none}
 .hero__content{z-index:3}
-.hero__title{font-family:var(--display);text-shadow:3px 4px 0 #111,0 0 28px rgba(138,203,98,.18)}
+.hero__title{font-family:var(--display);text-shadow:3px 4px 0 #111,0 0 28px rgba(138,203,98,.18);transition:text-shadow .45s ease}
+.hero__title:hover{text-shadow:3px 4px 0 #111,0 0 42px rgba(138,203,98,.42)}
+.hero__title:hover em{text-shadow:3px 4px 0 #111,0 0 28px rgba(138,203,98,.5)}
 .hero__title em{color:var(--green);-webkit-text-stroke:0;text-shadow:3px 4px 0 #111}
 .hero__visual{z-index:2;right:7vw;width:min(540px,45vw);height:650px;opacity:1}
 .hero__image-frame{position:absolute;inset:0;overflow:hidden;clip-path:polygon(8% 0,92% 0,100% 8%,100% 92%,92% 100%,8% 100%,0 92%,0 8%);border:2px solid var(--gold);box-shadow:0 0 0 8px rgba(8,9,8,.7),0 0 45px rgba(138,203,98,.25)}
@@ -96,6 +98,46 @@ body{background:#080908;background-image:radial-gradient(circle at 78% 8%,rgba(7
 .final-cta__glow{background:radial-gradient(circle,rgba(207,76,67,.23),transparent 65%)}
 .final-cta h2 em{color:var(--gold)}
 .footer{border-top:1px solid rgba(199,164,91,.35)}
-@media(max-width:800px){.hero{background-position:64% center}.hero__visual{width:72vw;height:560px;right:-17vw;opacity:.64}.hero__image-frame{clip-path:polygon(8% 0,92% 0,100% 8%,100% 92%,92% 100%,8% 100%,0 92%,0 8%)}.comic-burst{right:-15px}.doom-stamp{left:-12px}.story__seal{left:auto;right:10px}.story__year>img{width:175px;height:125px}.story__mask{top:155px;left:98px;width:130px;height:160px}.story__copy{position:relative;z-index:2;background:#0b0d0c;padding-top:18px}.mission-card__visual{min-height:220px}.briefing-art{height:190px}.briefing-art div{left:20px}.briefing-art strong{font-size:2.6rem}}
+@media(max-width:800px){.hero{background-position:64% center}.hero__visual{width:72vw;height:560px;right:-17vw;opacity:.64}.hero__image-frame{clip-path:polygon(8% 0,92% 0,100% 8%,100% 92%,92% 100%,8% 100%,0 92%,0 8%)}.comic-burst{right:-15px}.doom-stamp{left:-12px}.story__layout{position:relative;isolation:isolate}.story__year{position:relative;z-index:0}.story__seal{left:auto;right:10px}.story__year>img{width:175px;height:125px}.story__mask{top:155px;left:98px;width:130px;height:160px}.story__copy{position:relative;z-index:10;background:#0b0d0c;box-shadow:0 0 0 18px #0b0d0c;padding-top:18px}.mission-card__visual{min-height:220px}.briefing-art{height:190px}.briefing-art div{left:20px}.briefing-art strong{font-size:2.6rem}}
+.hero__image-frame{transition:transform .16s ease-out,box-shadow .16s ease-out;will-change:transform,box-shadow}
+.hero__image-frame img{transition:transform .14s ease-out}
+.hero__image-frame:hover{transform:scale(1.01) rotate(-.4deg);box-shadow:0 0 0 8px rgba(8,9,8,.7),0 0 58px rgba(138,203,98,.36)}
+
+.story__year>img,.story__mask{transition:transform .14s ease-out}
+.story__year>img:hover{animation:photo-nudge .5s ease-out}
+.story__mask:hover{animation:mask-nudge .5s ease-out}
+.mission-card{transition:transform .14s ease-out,box-shadow .14s ease-out,border-color .14s ease-out;will-change:transform,box-shadow}
+.mission-card:hover{transform:translateY(-8px) scale(1.012);box-shadow:0 14px 28px rgba(0,0,0,.22)}
+.mission-card--green:hover,.mission-card--red:hover,.mission-card--gold:hover{transform:translateY(-8px) scale(1.012);transition:transform .1s ease-out,box-shadow .1s ease-out,border-color .1s ease-out}
+.mission-card--green,.mission-card--red,.mission-card--gold{transition:transform .1s ease-out,box-shadow .1s ease-out,border-color .1s ease-out!important}
+.mission-card--green:hover,.mission-card--red:hover,.mission-card--gold:hover{transition-duration:.1s!important}
+.briefing-item{transition:border-color .14s ease-out,background-color .14s ease-out}
+.briefing-item:hover{border-color:rgba(199,164,91,.72);background:rgba(18,23,18,.42)}
+.identity-card{transition:transform .14s ease-out,border-color .14s ease-out,background-color .14s ease-out}
+.identity-card:before,.identity-icon{transition:all .14s ease-out}
+.button,.brief-button,.mission-button{transition:transform .12s ease-out,background-color .12s ease-out,border-color .12s ease-out,color .12s ease-out}
+@keyframes photo-nudge{0%,100%{transform:rotate(-4deg) translateX(0)}25%{transform:rotate(-4.35deg) translateX(-1px)}50%{transform:rotate(-3.7deg) translateX(1px)}75%{transform:rotate(-4.2deg) translateX(0)}}
+@keyframes mask-nudge{0%,100%{transform:rotate(7deg) translateX(0)}25%{transform:rotate(6.7deg) translateX(-1px)}50%{transform:rotate(7.3deg) translateX(1px)}75%{transform:rotate(6.9deg) translateX(0)}}
+@media (prefers-reduced-motion:reduce){.hero__image-frame,.hero__image-frame img,.story__year>img,.story__mask,.mission-card,.briefing-item{transition:none}.story__year>img:hover,.story__mask:hover{animation:none}.hero__image-frame:hover{transform:none}.hero__image-frame:hover img{transform:scale(1.08)}}
 @media(max-width:800px){.countdown__heading{display:flex;align-items:center;text-align:center}.countdown__heading h2{margin-top:18px}.countdown__clock{width:100%}}
 .comic-burst{width:150px;height:150px;padding:0 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:1.35rem;line-height:.85}
+
+/* Ambient protocol activity */
+.hero__image-frame img{animation:hero-breathe 16s ease-in-out infinite alternate}
+.doom-sigil{animation:sigil-turn 34s linear infinite}
+.orbit{animation:orbit-turn 24s linear infinite}
+.orbit--two{animation:orbit-turn-reverse 31s linear infinite}
+.armor__face i{animation:eye-pulse 4.8s ease-in-out infinite}
+.armor__face i:nth-child(2){animation-delay:1.1s}
+.scan-lines{background-size:100% 24px;animation:scan-drift 9s linear infinite}
+.threat i{animation:telemetry-pulse 3.6s ease-in-out infinite}
+.status-dot{animation:status-pulse 3s ease-in-out infinite}
+@keyframes hero-breathe{0%{transform:scale(1.08) translate3d(0,0,0)}100%{transform:scale(1.12) translate3d(-.6%,.4%,0)}}
+@keyframes sigil-turn{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes orbit-turn{to{transform:translate(-50%,-50%) rotate(332deg)}}
+@keyframes orbit-turn-reverse{to{transform:translate(-50%,-50%) rotate(-302deg)}}
+@keyframes eye-pulse{0%,100%{opacity:.72;box-shadow:0 0 12px var(--green)}50%{opacity:1;box-shadow:0 0 24px var(--green)}}
+@keyframes scan-drift{to{background-position:0 24px}}
+@keyframes telemetry-pulse{0%,100%{opacity:.7}50%{opacity:1;filter:brightness(1.35)}}
+@keyframes status-pulse{0%,100%{opacity:.65}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.hero__image-frame img,.doom-sigil,.orbit,.orbit--two,.armor__face i,.scan-lines,.threat i,.status-dot{animation:none}}
